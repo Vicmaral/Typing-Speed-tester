@@ -14,20 +14,25 @@ FONT_NAME = "Courier"
 h_size = 800
 w_size = 1200
 
-r = RandomWords()
+
+def get_random_word():
+    r = RandomWords()
+    temp_word=r.get_random_word()
+    while len(temp_word)>5:
+        temp_word=r.get_random_word()
+    return temp_word
+
 
 # global typed_word, random_word, num_words
 typed_word = ""
-random_word = r.get_random_word()
+random_word = get_random_word()
 num_words = 0
+num_chars = 0
 start = 0
 
 
 def key_pressed(event):
-    global random_word
-    global typed_word
-    global num_words
-    global start
+    global random_word, num_chars, typed_word, num_words, start
     if start == 0:
         start = time.time()
     if event.keysym == 'BackSpace':
@@ -35,14 +40,21 @@ def key_pressed(event):
     else:
         typed_word += "".join((event.char,))
     if typed_word == random_word:
-        random_word = r.get_random_word()
+        num_words += 1
+        num_chars += len(random_word)
+        random_word = get_random_word()
         word_to_type.config(text=random_word)
         typed_word = ''
         output_word.config(text=typed_word)
         entry.delete(0, customtkinter.END)
-        num_words += 1
-        tk.Label(window, text="Words:" + str(num_words), font=(FONT_NAME, 20, 'bold')
+        tk.Label(window, text="  Words:" + str(num_words), font=(FONT_NAME, 20, 'bold')
                  ).grid(row=4, column=2)
+        tk.Label(window, text="  " + str(round((num_words / (time.time() - start) * 60), 2)) + "words/s  ",
+                 font=(FONT_NAME, 20, 'bold')
+                 ).grid(row=4, column=1)
+        tk.Label(window, text=str(round((num_chars / (time.time() - start) * 60), 2)) + "chars/s  ",
+                 font=(FONT_NAME, 20, 'bold')
+                 ).grid(row=4, column=0)
     else:
 
         print('You pressed %s\n' % typed_word)
