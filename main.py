@@ -17,9 +17,9 @@ w_size = 1200
 
 def get_random_word():
     r = RandomWords()
-    temp_word=r.get_random_word()
-    while len(temp_word)>5:
-        temp_word=r.get_random_word()
+    temp_word = r.get_random_word()
+    while len(temp_word) > 5:
+        temp_word = r.get_random_word()
     return temp_word
 
 

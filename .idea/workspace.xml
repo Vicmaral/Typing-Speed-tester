@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70898120-f292-48c5-b050-9178479f752c" name="Changes" comment="Words change but need typing counter">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="70898120-f292-48c5-b050-9178479f752c" name="Changes" comment="Works not perfect, but works">
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +22,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Vicmaral"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Vicmaral/Typing-Speed-tester.git",
+    "accountId": "de1c1079-79af-4b01-a428-dad8555251f8"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -63,12 +74,21 @@
       <option name="project" value="LOCAL" />
       <updated>1730826164125</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Words change but need typing counter">
+      <option name="closed" value="true" />
+      <created>1730906348610</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1730906348610</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Words change but need typing counter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Words change but need typing counter" />
+    <MESSAGE value="Works not perfect, but works" />
+    <option name="LAST_COMMIT_MESSAGE" value="Works not perfect, but works" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
